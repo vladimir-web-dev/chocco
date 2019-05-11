@@ -501,26 +501,12 @@ section {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-  .reasons__header {
-    max-width: 44.5rem;
-    margin-bottom: 5.6rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
   .reasons__heading {
     margin-bottom: 2.3rem; }
   .reasons__description {
-    text-align: center; }
+    text-align: center;
+    max-width: 44.5rem;
+    margin-bottom: 5.6rem; }
   .reasons__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -567,6 +553,18 @@ section {
     left: 0;
     width: 16rem;
     height: 31.5rem; }
+
+.team__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 .reviews {
   position: relative; }
