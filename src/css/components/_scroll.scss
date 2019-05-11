@@ -1,0 +1,39 @@
+.scroll {    
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__item {
+        position: relative;
+        width: .6rem;
+        height: .6rem;
+        border-radius: 50%;
+        background-color: $c-white;
+        margin-bottom: 1.6rem;
+        
+
+        &--active::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: -.6rem;
+            left: -.6rem;
+            width: 1.6rem;
+            height: 1.6rem;
+            border-radius: 50%;
+            border: 1px solid $c-white;
+            pointer-events: none;
+        }
+    }
+
+    &__link {
+        display: block;
+        line-height: 0;
+        width:100%;
+        height: 100%;
+    }
+
+
+}

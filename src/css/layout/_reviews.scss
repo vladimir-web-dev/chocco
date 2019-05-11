@@ -1,0 +1,60 @@
+.reviews {
+    position: relative;
+    
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__heading {
+        margin-bottom: 6rem;
+    }
+
+    &__review {
+        padding: 5rem 24.6rem 5rem 4.6rem;
+        margin-bottom: 4.2rem;
+        background-color: $c-bg-ligther;
+
+        background-image: url('../img/decoration/review-bg-image.png');
+        background-repeat: no-repeat;
+        background-position: top right;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        margin-right: 4rem;
+        box-sizing: content-box;
+
+        &--active {
+            margin-left: -.8rem;
+            margin-top: -.8rem;
+            border: .8rem solid $c-secondary;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &::before {
+        @include absolute-decoration('../img/decoration/berries5.png') {
+            top: 1rem;
+            right: 0;
+            width: 17.3rem;
+            height: 9.9rem;
+        }     
+    }
+
+    &::after {
+        @include absolute-decoration('../img/decoration/reviews-fg-image.png') {
+            bottom: -8rem;
+            left: 0;
+            width: 16rem;
+            height: 42.1rem;
+        }   
+    }
+}

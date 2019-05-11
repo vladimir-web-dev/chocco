@@ -1,0 +1,17 @@
+.features-list {
+    display: flex;
+    align-items: flex-start;
+
+    
+
+    &__item {
+        margin-right: 4.7rem;
+        width: 13.6rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+
+}

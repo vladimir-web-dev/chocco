@@ -1,0 +1,15 @@
+@mixin absolute-decoration ($bg-url, $bg-position: center, $bg-size: cover){
+    content: "";
+    position: absolute;
+    display: block;
+
+    background-image: url($bg-url);
+    background-position: $bg-position;
+    background-size: $bg-size;
+    background-repeat: no-repeat;
+
+    pointer-events: none;
+
+    //@content for position rules and size
+    @content;
+}

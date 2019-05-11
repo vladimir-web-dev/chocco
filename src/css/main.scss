@@ -1,0 +1,31 @@
+@charset 'utf-8';
+
+/*abstract*/
+@import 'abstract/mixins';
+@import 'abstract/variables';
+
+/*base*/
+@import 'base/normalize';
+@import 'base/fonts';
+@import 'base/base';
+
+/*layout*/
+@import 'layout/aside';
+@import 'layout/header';
+@import 'layout/landing';
+@import 'layout/reasons';
+@import 'layout/reviews';
+@import 'layout/footer';
+
+/*components*/
+@import 'components/scroll';
+@import 'components/logo';
+@import 'components/navigation';
+@import 'components/contacts';
+@import 'components/main-btn';
+@import 'components/features-list';
+@import 'components/feature';
+@import 'components/reason';
+@import 'components/heading';
+@import 'components/review';
+@import 'components/avatar';
