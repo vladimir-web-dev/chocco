@@ -8,40 +8,7 @@
     <link rel="stylesheet" href="src/css/main.css">
 </head>
 <body>
-    <div class="wrapper">
-        <aside class="aside">
-            <nav class="scroll">
-                <ul class="scroll__list">
-                    <li class="scroll__item scroll__item--active">
-                        <a href="#" class="scroll__link"></a>
-                    </li>
-                    <li class="scroll__item">
-                        <a href="#" class="scroll__link"></a>
-                    </li>
-                    <li class="scroll__item">
-                        <a href="#" class="scroll__link"></a>
-                    </li>
-                    <li class="scroll__item">
-                        <a href="#" class="scroll__link"></a>
-                    </li>
-                    <li class="scroll__item">
-                        <a href="#" class="scroll__link"></a>
-                    </li>
-                    <li class="scroll__item">
-                        <a href="#" class="scroll__link"></a>
-                    </li>
-                    <li class="scroll__item">
-                        <a href="#" class="scroll__link"></a>
-                    </li>
-                    <li class="scroll__item">
-                        <a href="#" class="scroll__link"></a>
-                    </li>
-                    <li class="scroll__item">
-                        <a href="#" class="scroll__link"></a>
-                    </li>
-                </ul>
-            </nav>
-        </aside>       
+    <div class="wrapper">   
         <section class="landing">
             <div class="container landing__container">
                 <header class="header landing__header">
@@ -50,7 +17,7 @@
                         <div class="logo__text">CCO</div>
                     </div>
                     <div class="header__buttons">
-                        <nav class="navigation header__navigation">
+                        <nav class="navigation">
                             <ul class="navigation__list">
                                 <li class="navigation__item">
                                     <a href="#" class="navigation__link">О нас</a>
@@ -94,20 +61,20 @@
                         </div>
                     </div>
                 </div>
-                <ul class="features-list landing__features-list">
-                    <li class="feature features-list__item">
+                <ul class="landing__list">
+                    <li class="feature landing__item">
                         <div class="feature__img-container">
                             <img src="src/img/content/icon-feature1.png" alt="Feature Icon" class="feature__img">
                         </div>
                         <div class="feature__description">100% натуральный продукт</div>
                     </li>
-                    <li class="feature features-list__item">
+                    <li class="feature landing__item">
                         <div class="feature__img-container">
                             <img src="src/img/content/icon-feature2.png" alt="Feature Icon" class="feature__img">
                         </div>
                         <div class="feature__description">3-5 дней доставка по РФ</div>
                     </li>
-                    <li class="feature features-list__item">
+                    <li class="feature landing__item">
                         <div class="feature__img-container">
                             <img src="src/img/content/icon-feature3.png" alt="Feature Icon" class="feature__img">
                         </div>
@@ -136,7 +103,6 @@
                         <h3 class="reason__heading">Полезно</h3>
                         <p class="reason__description">Натуральность - ключевое качество нашей продукции. Мы используем только природные ингредиенты.</p>
                     </li>
-                    <li class="reasons__list-dec"></li>
                     <li class="reason reasons__item">
                         <div class="reason__icon">
                             <img src="src/img/content/icon-reason2.png" alt="Reason Icon" class="reason__icon-img">
@@ -144,7 +110,6 @@
                         <h3 class="reason__heading">Вкусно</h3>
                         <p class="reason__description">Нежный, ненавязчивый, изысканный – так клиенты описывают вкусовые качества наших батончиков.</p>
                     </li>
-                    <li class="reasons__list-dec"></li>
                     <li class="reason reasons__item">
                         <div class="reason__icon">
                             <img src="src/img/content/icon-reason3.png" alt="Reason Icon" class="reason__icon-img">
@@ -160,10 +125,54 @@
             </div>
         </section>
         <section class="team">
-            <div class="container"></div>
+            <div class="container team__container">
+                <h2 class="heading heading--secondary reviews__heading">команда</h2>
+                <ul class="team__list">
+                    <li class="member team__item">
+                        <div class="member__img-container">
+                            <img src="src/img/content/team1.png" alt="Member Photo" class="member__img">
+                        </div>
+                        <a href="#" class="member__button">Борис Федорович</a>
+                        <div class="member__box">
+                            <h5 class="member__occupation"></h5>
+                            <p class="member__comment"></p>
+                        </div>
+                    </li>
+                    <li class="member team__item team__item--down">
+                        <div class="member__img-container">
+                            <img src="src/img/content/team2.png" alt="Member Photo" class="member__img">
+                        </div>
+                        <a href="#" class="member__button">Алла Иванова</a>
+                        <div class="member__box">
+                            <h5 class="member__occupation"></h5>
+                            <p class="member__comment"></p>
+                        </div>
+                    </li>
+                    <li class="member team__item">
+                        <div class="member__img-container">
+                            <img src="src/img/content/team3.png" alt="Member Photo" class="member__img">
+                        </div>
+                        <a href="#" class="member__button">Кирилл Матросов</a>
+                        <div class="member__box">
+                            <h5 class="member__occupation">Оператор</h5>
+                            <p class="member__comment">С радостью поможет подобрать батончики и оформить заказ. </p>
+                        </div>
+                    </li>
+                    <li class="member team__item team__item--down">
+                        <div class="member__img-container">
+                            <img src="src/img/content/team4.png" alt="Member Photo" class="member__img">
+                        </div>
+                        <a href="#" class="member__button">Мила Рыжкова</a>
+                        <div class="member__box">
+                            <h5 class="member__occupation"></h5>
+                            <p class="member__comment"></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </section>
         <section class="menu">
-            <div class="container team__container"></div>
+            <div class="container"></div>
         </section>
         <section class="reviews">
             <div class="container reviews__container">
@@ -201,14 +210,83 @@
             <div class="container"></div>
         </section>
         <section class="order">
-            <div class="container"></div>
+            <div class="container order__container">
+                <h2 class="heading heading--secondary order__heading">Закажите доставку</h2>
+                <div class="form order__form">
+                    <form action="" class="form-el">
+                        <div class="form__col">
+                            <div class="form__row"></div>
+                            <div class="form__row"></div>
+                            <div class="form__row"></div>
+                        </div>
+                        <div class="form__col">
+                            <div class="form__row"></div>
+                            <div class="form__row"></div>
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
         </section>
-        <section class="locations">
-            <div class="container"></div>
-        </section>
-        <footer class="footer">
-            <div class="container"></div>
-        </footer>
+        <section class="locations">   
+            <img class="map locations__map" alt="Map" src='src/img/content/map.png'>              
+            <!-- <div class="container locations__container"> 
+                             
+            </div> -->
+            <footer class="footer locations__footer">
+                <div class="container footer__container">
+                    <div class="footer__left">
+                        <address class="contacts">
+                            <div class="contacts__street">
+                                Москва, ул.Новый Арбат, д.31/12
+                            </div>
+                            <a class="contacts__phone contacts__phone--green" href="tel:88009039090">8 800 903 90 90</a>
+                        </address>
+                    </div>
+                    <div class="footer__right">
+                        <ul class="social">
+                            <li class="social__icon"></li>
+                            <li class="social__icon"></li>
+                            <li class="social__icon"></li>
+                            <li class="social__icon"></li>
+                        </ul>
+                    </div>
+                </div>                     
+            </footer>       
+        </section>      
     </div>
+    <aside class="aside">
+        <nav class="scroll">
+            <ul class="scroll__list">
+                <li class="scroll__item scroll__item--active">
+                    <a href="#" class="scroll__link"></a>
+                </li>
+                <li class="scroll__item">
+                    <a href="#" class="scroll__link"></a>
+                </li>
+                <li class="scroll__item">
+                    <a href="#" class="scroll__link"></a>
+                </li>
+                <li class="scroll__item">
+                    <a href="#" class="scroll__link"></a>
+                </li>
+                <li class="scroll__item">
+                    <a href="#" class="scroll__link"></a>
+                </li>
+                <li class="scroll__item">
+                    <a href="#" class="scroll__link"></a>
+                </li>
+                <li class="scroll__item">
+                    <a href="#" class="scroll__link"></a>
+                </li>
+                <li class="scroll__item">
+                    <a href="#" class="scroll__link"></a>
+                </li>
+                <li class="scroll__item">
+                    <a href="#" class="scroll__link"></a>
+                </li>
+            </ul>
+        </nav>
+    </aside>    
 </body>
 </html>

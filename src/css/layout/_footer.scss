@@ -1,0 +1,27 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    background-color: #fff;
+
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__left,
+    &__right {
+        display: flex;
+        align-items: center;
+        width: 50%;
+    }
+
+    &__left {      
+        justify-content: flex-start;     
+    }
+
+    &__right {      
+        justify-content: flex-end;      
+    }
+}

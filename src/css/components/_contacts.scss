@@ -1,7 +1,16 @@
 .contacts {
     font-size: 2.4rem;
 
-    &__phone {        
+    &__street {
+        font-size: 2.38rem;
+        font-family: $ff-main-regular;
+    }
+
+    &__phone { 
+        
+        &--green {
+            color: $c-secondary;
+        }
          
         &:before {
             content: " ";

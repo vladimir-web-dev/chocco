@@ -1,8 +1,19 @@
 .team {
-
     &__container {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: top;
+        align-self: stretch;
+    }
+
+    &__item--down {
+        margin-top: 5.7rem;
     }
 }

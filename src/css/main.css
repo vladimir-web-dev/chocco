@@ -378,6 +378,13 @@ button {
 section {
   height: 100vh; }
 
+address {
+  font-style: normal; }
+
+img {
+  max-width: 100%;
+  max-height: 100%; }
+
 .wrapper {
   overflow: hidden;
   position: relative; }
@@ -464,12 +471,23 @@ section {
   .landing__image {
     width: 50rem;
     height: 50rem; }
-    .landing__image--img {
+    .landing__image-img {
       max-width: 100%;
       max-height: 100%; }
-  .landing__features-list {
+  .landing__list {
     margin-top: auto;
-    margin-bottom: 4.6rem; }
+    margin-bottom: 4.6rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+  .landing__item {
+    margin-right: 4.7rem;
+    width: 13.6rem; }
+    .landing__item:last-child {
+      margin-right: 0; }
   .landing::before {
     content: "";
     position: absolute;
@@ -564,7 +582,26 @@ section {
   flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.team__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: top;
+  -ms-flex-align: top;
+  align-items: top;
+  -ms-flex-item-align: stretch;
+  align-self: stretch; }
+
+.team__item--down {
+  margin-top: 5.7rem; }
 
 .reviews {
   position: relative; }
@@ -629,6 +666,61 @@ section {
     width: 16rem;
     height: 42.1rem; }
 
+.order {
+  background-color: #cfdeda;
+  background-image: url("../img/decoration/order-bg-image.png");
+  color: #0f5a47; }
+  .order__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .order__heading {
+    margin-bottom: 6rem; }
+
+.locations__map {
+  width: 100%;
+  height: 100%; }
+
+.locations__footer {
+  padding-top: 2.9rem;
+  padding-bottom: 2.2rem; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff; }
+  .footer__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .footer__left, .footer__right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 50%; }
+  .footer__left {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
+  .footer__right {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+
 /*components*/
 .scroll__list {
   display: -webkit-box;
@@ -684,6 +776,11 @@ section {
 
 .contacts {
   font-size: 2.4rem; }
+  .contacts__street {
+    font-size: 2.38rem;
+    font-family: "Alegreya Sans Regular"; }
+  .contacts__phone--green {
+    color: #0f5a47; }
   .contacts__phone:before {
     content: " ";
     display: inline-block;
@@ -709,19 +806,6 @@ section {
     background-color: #fff;
     -webkit-box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2); }
-
-.features-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start; }
-  .features-list__item {
-    margin-right: 4.7rem;
-    width: 13.6rem; }
-    .features-list__item:last-child {
-      margin-right: 0; }
 
 .feature {
   font-size: 1.6rem;
@@ -818,3 +902,36 @@ section {
     display: inline-block;
     width: 100%;
     height: 100%; }
+
+.member {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 22.2rem; }
+  .member__img-container {
+    height: 28.8rem;
+    margin-bottom: 2.3rem;
+    overflow: hidden; }
+  .member__img {
+    width: 100%;
+    height: 100%; }
+  .member__button {
+    font-family: "Alegreya Sans Medium";
+    font-size: 2rem;
+    margin-bottom: 2rem; }
+  .member__box {
+    text-align: center; }
+  .member__occupation {
+    font-family: "Alegreya Sans Regular";
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem; }
+  .member__comment {
+    font-family: "Alegreya Sans Light";
+    font-size: 1.8rem; }

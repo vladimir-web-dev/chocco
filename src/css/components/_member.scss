@@ -1,0 +1,40 @@
+.member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 22.2rem;
+
+    &__img-container {
+        height: 28.8rem;
+        // width: 22.2rem;
+        margin-bottom: 2.3rem;
+        overflow: hidden;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__button {
+        font-family: $ff-main-medium;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    &__box {
+        text-align: center;
+    }
+
+    &__occupation {
+        font-family: $ff-main-regular;
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+
+    }
+
+    &__comment {
+        font-family: $ff-main-light;
+        font-size: 1.8rem;
+    }   
+}
