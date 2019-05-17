@@ -18,8 +18,12 @@
         width: 100%;
         margin-bottom: 2rem;
 
-        &--chkboxes {
+        &--chk {
             flex-wrap: wrap;
+        }
+
+        &--margin {
+            margin-bottom: 3.1rem;
         }
     }
 
@@ -29,6 +33,13 @@
 
         &:last-child {
             margin-right: 0;
+        }
+
+        &--chk {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            flex: 0 0 40%;;
         }
     }
 

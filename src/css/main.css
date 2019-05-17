@@ -510,6 +510,7 @@ img {
   background-repeat: no-repeat;
   background-position: center left; }
   .reasons__container {
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -517,6 +518,9 @@ img {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
@@ -570,6 +574,7 @@ img {
     height: 31.5rem; }
 
 .team__container {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -603,6 +608,7 @@ img {
 .reviews {
   position: relative; }
   .reviews__container {
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -612,7 +618,10 @@ img {
     flex-direction: column;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
   .reviews__heading {
     margin-bottom: 6rem; }
   .reviews__review {
@@ -953,9 +962,11 @@ img {
   display: flex;
   width: 100%;
   margin-bottom: 2rem; }
-  .form__row--chkboxes {
+  .form__row--chk {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
+  .form__row--margin {
+    margin-bottom: 3.1rem; }
 
 .form__block {
   -webkit-box-flex: 1;
@@ -964,6 +975,20 @@ img {
   margin-right: 2rem; }
   .form__block:last-child {
     margin-right: 0; }
+  .form__block--chk {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 40%;
+    flex: 0 0 40%; }
 
 .form__title {
   font-size: 1.8rem;
