@@ -470,11 +470,14 @@ img {
   .landing__buttons {
     margin-bottom: 6.5rem; }
   .landing__image {
+    background-image: url("../img/content/bars1.png");
+    background-position: center;
+    background-repeat: no-repeat;
     width: 50rem;
-    height: 50rem;
-    -webkit-transform: translate(7%, -7%);
-    -ms-transform: translate(7%, -7%);
-    transform: translate(7%, -7%); }
+    height: 53rem;
+    -webkit-transform: translate(5%, -6%);
+    -ms-transform: translate(5%, -6%);
+    transform: translate(5%, -6%); }
   .landing__list {
     margin-top: auto;
     margin-bottom: 4.6rem;

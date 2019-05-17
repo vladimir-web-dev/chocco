@@ -47,9 +47,12 @@
     }
 
     &__image {
+        background-image: url('../img/content/bars1.png');
+        background-position: center;
+        background-repeat: no-repeat;
         width:50rem;
-        height: 50rem;
-        transform: translate(7%,-7%);
+        height: 53rem;
+        transform: translate(5%,-6%);
     }
 
     &__list {
