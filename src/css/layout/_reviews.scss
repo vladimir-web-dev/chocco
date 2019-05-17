@@ -26,10 +26,11 @@
     }
 
     &__item {
-        margin-right: 4rem;
+        margin-right: 4.1rem;
         box-sizing: content-box;
 
         &--active {
+            margin-right: 3.3rem;
             margin-left: -.8rem;
             margin-top: -.8rem;
             border: .8rem solid $c-secondary;

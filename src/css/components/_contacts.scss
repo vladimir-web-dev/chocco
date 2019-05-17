@@ -6,24 +6,19 @@
         font-family: $ff-main-regular;
     }
 
-    &__phone { 
-        
+    &__phone {        
         &--green {
             color: $c-secondary;
-        }
-         
-        &:before {
-            content: " ";
-            display: inline-block;
-            vertical-align: middle;
-            height: 1.1rem;
-            width: 1.2rem;
 
-            margin-right: .6rem;
-            
-            background-image: url('../img/decoration/icon-phone.png');
-            background-position: center;
-            background-repeat: no-repeat;            
-        }
+            .contacts__icon {
+                fill: $c-secondary;
+            }
+        }                     
     } 
+
+    &__icon {
+        font-size: 1.1rem;
+        width: 1.2rem;
+        height: 1.1rem;
+    }
 }

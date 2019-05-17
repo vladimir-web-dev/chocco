@@ -34,7 +34,7 @@
         line-height: 1;    
         text-transform: uppercase; 
         
-        margin-bottom: 2.5rem;
+        margin-bottom: .8rem;
     }
 
     &__text {
@@ -49,11 +49,7 @@
     &__image {
         width:50rem;
         height: 50rem;
-
-        &-img {
-            max-width: 100%;
-            max-height: 100%;
-        }
+        transform: translate(7%,-7%);
     }
 
     &__list {
@@ -65,7 +61,7 @@
 
     &__item {
         margin-right: 4.7rem;
-        width: 13.6rem;
+        width: 13.5rem;
 
         &:last-child {
             margin-right: 0;

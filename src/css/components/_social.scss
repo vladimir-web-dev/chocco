@@ -1,0 +1,27 @@
+.social {
+    display: flex;
+    align-items: center;
+
+    &__item:not(:last-child) {
+        margin-right: 2rem;
+    }
+
+    &__icon {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        opacity: .3;
+        background-position:center;
+        background-repeat: no-repeat; 
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    @each $social in (vk, fb, inst, tw) {
+        &__icon--#{$social} {
+            background-image: url('../img/content/#{$social}.png')
+        }
+    }
+}

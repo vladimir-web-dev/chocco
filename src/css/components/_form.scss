@@ -1,0 +1,116 @@
+.form {
+
+    &__tag{
+        display: flex;
+    }
+
+    &__col {
+        flex: 1;
+        margin-right: 2rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__row {
+        display: flex;
+        width: 100%;
+        margin-bottom: 2rem;
+
+        &--chkboxes {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__block {
+        flex: 1;
+        margin-right: 2rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        color: $c-secondary;
+        margin-bottom: 1rem;
+    }  
+
+    &__textarea {
+        height: 18rem;
+        resize: none;
+    }
+
+    &__custom {
+        position: relative;
+        display: inline-block;
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: #fff;
+    }
+
+    &__hidden {
+        display: none;
+
+        &:checked ~ .form__radio:after,
+        &:checked ~ .form__chk:after {
+            opacity: 1;
+        }
+
+    }
+
+    &__radio {
+        border-radius: 50%;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform:translate(-50%,-50%);
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: 50%;
+            background-color: $c-secondary;
+            opacity: 0;
+        }
+    }
+
+    &__chk {
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform:translate(-50%,-50%);
+            width: 1.2rem;
+            height: 1.2rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url('../img/decoration/check.png');
+            opacity: 0;
+        }
+    }
+
+    &__button {
+        margin-right: 2.2rem;
+    }
+}
+
+.form-field {
+    width: 100%;
+    background-color: #fff;
+    border: none;
+    padding: 2rem 1.1rem;
+
+    font-family: 'OpenSans';
+    font-size: 1,8rem;
+    color: #000;
+}
+
+.form-button {
+    font-size: 1.8rem;
+    color: $c-secondary;
+}

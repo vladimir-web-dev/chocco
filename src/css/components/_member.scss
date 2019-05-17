@@ -19,17 +19,35 @@
     &__button {
         font-family: $ff-main-medium;
         font-size: 2rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
+        
+        &::after {
+            content: " \25BC";
+            display: inline; 
+            color: $c-secondary;        
+        }
+
+        &.is-active {
+
+            &::after {
+                content: "\25B2";
+            }
+        }
+
+        &.is-active ~ .member__box {
+            display: block;
+        }
     }
 
     &__box {
         text-align: center;
+        display: none;
     }
 
     &__occupation {
         font-family: $ff-main-regular;
         font-size: 1.8rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.2rem;
 
     }
 
