@@ -6,16 +6,14 @@
     background-color: #fff;
 
     &__container {
-        display: flex;
+        flex-direction: row;
         align-items: center;
-    }
 
-    &__left,
-    &__right {
-        display: flex;
-        align-items: center;
-        width: 50%;
-    }
+        @include phones {
+            flex-direction: column; 
+            justify-content: center;
+        }
+    }   
 
     &__left {      
         justify-content: flex-start;     
@@ -23,5 +21,17 @@
 
     &__right {      
         justify-content: flex-end;      
+    }
+
+    &__left,
+    &__right {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        
+        @include phones {
+            justify-content: center;
+            width: 100%;
+        }
     }
 }

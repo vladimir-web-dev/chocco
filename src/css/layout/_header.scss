@@ -1,14 +1,21 @@
 .header {
     // padding: 2.4rem 0 4.5rem 0;
+    width: 100%;
     color: $c-white;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    &__buttons {
+    &__buttons,
+    &__menu {
         display: flex;
         align-items: center;
+    }
+
+    &__menu {
+        @include tablets {
+            display: none;;
+        }
     }
 
     &__contacts {

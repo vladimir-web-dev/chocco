@@ -1,3 +1,5 @@
+
+//decoration
 @mixin absolute-decoration ($bg-url, $bg-position: center, $bg-size: cover){
     content: "";
     position: absolute;
@@ -12,4 +14,17 @@
 
     //@content for position rules and size
     @content;
+}
+
+//breakpoints
+@mixin tablets {
+    @media screen and (max-width: $tablets) {
+        @content;
+    }
+}
+
+@mixin phones {
+    @media screen and (max-width: $phones) {
+        @content;
+    }
 }

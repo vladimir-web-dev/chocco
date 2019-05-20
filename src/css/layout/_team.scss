@@ -1,20 +1,31 @@
 .team {
-    &__container {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
 
     &__list {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: top;
         align-self: stretch;
+        
+        @include tablets {
+            margin-top: 0; 
+            max-width: 46rem;
+            align-self: center;
+
+        }
+    }
+
+    &__item {
+        @include tablets {
+            margin-bottom: 4rem; 
+        }
     }
 
     &__item--down {
         margin-top: 5.7rem;
-    }
+
+        @include tablets {
+            margin-top: 0; 
+        }
+    }    
 }

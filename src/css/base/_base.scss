@@ -8,7 +8,15 @@ body {
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 10px;
+
+    @include tablets{
+        font-size: 9px;
+    }
+
+    @include phones{
+        font-size: 8px;
+    }
 }
 
 body {
@@ -17,6 +25,7 @@ body {
 
     font-family: $ff-main-regular;
     font-size: 1.8rem;
+    -webkit-font-smoothing: antialiased;
 }
 
 h1,
@@ -37,6 +46,7 @@ ul {
 
 p {
     margin: 0;
+    padding: 0;
 }
 
 a {
@@ -52,8 +62,15 @@ button {
     cursor: pointer;
 }
 
-section {
+.section {
     height: 100vh;
+    min-height: rem(650px);
+    position: relative;
+    overflow: hidden;
+
+    // @include tablets {
+    //     min-height: 100%; 
+    // }
 }
 
 address {
@@ -68,10 +85,19 @@ img {
 .wrapper {
     overflow: hidden;
     position: relative;
+    min-height: 100%;
+    width: 100%;
 }
 
 .container {
     max-width: 94rem;
+    width: 95%;
+    height: 100%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 

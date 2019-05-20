@@ -1,0 +1,66 @@
+.accordion {
+    position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+    color: #fff;
+
+   &__item {
+        float: left;
+        height: 100%;
+   }
+
+    &__button {
+        display: block;
+        height: 100%;
+        float: left;
+        position: relative;
+        width: 10rem;
+
+       background-size: cover;
+       background-position: right;
+
+       @each $num in (1,2,3) {
+           &--bg#{$num} {
+            background-image: url('../img/decoration/accordion-item-bg-#{$num}.png');
+
+           }
+       }
+    }
+
+    &__heading {
+        font-size: 4.8rem;
+        font-family: $ff-main-medium;
+
+        text-align: center;
+        white-space: nowrap;
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        margin-top: -4.6rem;
+
+        transform: rotate(-90deg) translateY(-50%);
+        transform-origin: 0 0;
+       
+    }
+
+   &__content {
+        height: 100%;
+        float: left;
+        width: 0;
+        overflow: hidden;
+        background-color: rgba(0,0,0, .8);
+   }
+
+   &__text {
+       font-size: 1.6rem;
+       line-height: 2.3rem;
+       padding: 5rem 2.8rem;
+       width: 100%;
+       line-height: 1.8;
+   }
+
+   &__item.is-active &__content {
+        width: 43rem;
+   }
+}

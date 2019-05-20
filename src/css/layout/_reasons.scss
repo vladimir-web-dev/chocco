@@ -7,15 +7,8 @@
     background-position: center left;
 
     &__container {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-
-    &__heading {
-        margin-bottom: 2.3rem;
     }
 
     &__description {
@@ -27,8 +20,11 @@
 
     &__list {
         display: flex;
-        // justify-content: space-between;
         align-items: center;
+
+        @include tablets {
+            flex-direction: column; 
+        }
     }
 
     &__item {
@@ -48,7 +44,16 @@
                 width: 7rem;
                 height: 2.2rem;
                 transform:translateX(100%)
-            }                    
+            }     
+            
+            @include tablets {
+               display: none;          
+            }
+        }
+
+        @include tablets {
+            margin-right: 0;
+            margin-bottom: 2.3rem;           
         }
     }   
 

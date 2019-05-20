@@ -1,0 +1,13 @@
+.menu {
+    position: relative;
+    background-image: url('../img/decoration/menu-bg-image.png');
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+
+    .menu__heading {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+    }
+}

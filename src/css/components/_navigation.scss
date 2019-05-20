@@ -4,7 +4,9 @@
     }
 
     &__item {
+        white-space: nowrap;
         margin-right: 2.8rem;
+        display: inline-block;
 
         &:last-child {
             margin-right: 0;

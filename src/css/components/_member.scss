@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 22.2rem;
+    max-width: 22.2rem;
 
     &__img-container {
         height: 28.8rem;
@@ -12,6 +12,7 @@
     }
 
     &__img {
+        object-fit: cover;
         width: 100%;
         height: 100%;
     }
@@ -26,22 +27,12 @@
             display: inline; 
             color: $c-secondary;        
         }
-
-        &.is-active {
-
-            &::after {
-                content: "\25B2";
-            }
-        }
-
-        &.is-active ~ .member__box {
-            display: block;
-        }
     }
 
     &__box {
         text-align: center;
-        display: none;
+        max-height: 0;
+        overflow: hidden;
     }
 
     &__occupation {
@@ -54,5 +45,13 @@
     &__comment {
         font-family: $ff-main-light;
         font-size: 1.8rem;
-    }   
+    }
+    
+    &.is-active .member__box {
+        max-height: 100%;
+    }
+
+    &.is-active .member__button::after {
+        content: "\25B2";
+    }
 }

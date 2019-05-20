@@ -1,8 +1,9 @@
 @charset 'utf-8';
 
 /*abstract*/
-@import 'abstract/mixins';
 @import 'abstract/variables';
+@import 'abstract/mixins';
+@import 'abstract/functions';
 
 /*base*/
 @import 'base/normalize';
@@ -15,6 +16,7 @@
 @import 'layout/landing';
 @import 'layout/reasons';
 @import 'layout/team';
+@import 'layout/menu';
 @import 'layout/reviews';
 @import 'layout/order';
 @import 'layout/locations';
@@ -24,6 +26,7 @@
 @import 'components/scroll';
 @import 'components/logo';
 @import 'components/navigation';
+@import 'components/hamburger-icon.scss';
 @import 'components/contacts';
 @import 'components/main-btn';
 @import 'components/feature';
@@ -31,6 +34,7 @@
 @import 'components/heading';
 @import 'components/review';
 @import 'components/avatar';
+@import 'components/accordion';
 @import 'components/member';
 @import 'components/form';
 @import 'components/social';
