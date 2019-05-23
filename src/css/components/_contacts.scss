@@ -12,24 +12,24 @@
     }
 
     &__phone {
-        &::before {
-            content: "";
-            display: inline-block;
-            width: 12px;
-            height: 11px;
-            margin-right: 7px;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-image: url('../img/decoration/icon-phone.png');
-        }
+        white-space: nowrap;
+    }
 
-        &--green {
-            color: $c-secondary; 
+    &__phone-icon {
+        width: 12px;
+        height: 11px;
+        margin-right: 7px;
+
+        fill: #fff;
+    }
+
+    &__phone--green {
+        vertical-align: middle;
+        color: $c-secondary; 
             
-            &::before {
-                background-image: url('../img/decoration/icon-phone-green.png');
-            }
-        }                     
+        .contacts__phone-icon {
+            fill: $c-secondary;
+        }        
     } 
 
     @include phones {

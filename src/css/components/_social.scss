@@ -6,22 +6,19 @@
         margin-right: 2rem;
     }
 
+    &__link {
+        display: inline-block;
+    }
+
     &__icon {
         display: inline-block;
         width: 2rem;
         height: 2rem;
-        opacity: .3;
-        background-position:center;
-        background-repeat: no-repeat; 
+        opacity: .3;  
+        fill: #000;
 
         &:hover {
             opacity: 1;
-        }
-    }
-
-    @each $social in (vk, fb, inst, tw) {
-        &__icon--#{$social} {
-            background-image: url('../img/content/#{$social}.png')
         }
     }
 }

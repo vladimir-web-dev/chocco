@@ -3,6 +3,11 @@
     background-image: url('../img/decoration/order-bg-image.png');
     color: $c-secondary;
 
+    @include tablets {
+        padding: 7rem 0;
+    }
+
+
     &__container {
         align-items:  center;
         justify-content: center;
@@ -10,5 +15,29 @@
 
     &__heading {
         margin-bottom: 6rem;
+    }
+
+    &::after{
+        content: url("../img/decoration/berries7.png");
+        position: absolute;
+        left: 1%;
+        bottom: 8%;
+        z-index: 5;
+
+        @include tablets {
+            display: none;
+        }
+    }
+
+    &::before{
+        content: url("../img/decoration/leaves3.png");
+        position: absolute;
+        right: 0;
+        bottom: 25%;
+        z-index: 5;
+
+        @include tablets {
+            display: none;
+        }
     }
 }

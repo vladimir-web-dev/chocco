@@ -386,9 +386,11 @@ button {
 
 .section {
   height: 100vh;
-  min-height: 40.625 rem;
-  position: relative;
-  overflow: hidden; }
+  position: relative; }
+  @media screen and (max-width: 768px) {
+    .section {
+      min-height: 650px;
+      height: 100%; } }
 
 address {
   font-style: normal; }
@@ -459,10 +461,7 @@ img {
 
 .landing {
   color: #fff;
-  background-color: #61c4d9;
-  background-image: url("../img/decoration/header-bg-image.png");
-  background-repeat: no-repeat;
-  background-position: bottom right; }
+  background-color: #61c4d9; }
   .landing__header {
     margin-top: 2.4rem; }
   .landing__container {
@@ -490,7 +489,7 @@ img {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        padding: 0 15%; } }
+        padding: 0 24%; } }
     @media screen and (max-width: 480px) {
       .landing__content {
         padding: 0; } }
@@ -505,6 +504,21 @@ img {
       -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
       order: 2; } }
+  .landing__content-right {
+    position: relative; }
+    @media screen and (max-width: 768px) {
+      .landing__content-right::after {
+        content: "";
+        background-image: url("../img/decoration/leaves4.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 90%;
+        height: 90%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5; } }
   .landing__heading {
     font-family: "Alegreya Sans Bold";
     font-size: 6rem;
@@ -540,13 +554,33 @@ img {
     width: 13.5rem; }
     .landing__item:last-child {
       margin-right: 0; }
+  .landing::after {
+    content: url("../img/decoration/leaves2.png");
+    position: absolute;
+    right: 1.4rem;
+    bottom: -6rem;
+    z-index: 5; }
+    @media screen and (max-width: 768px) {
+      .landing::after {
+        display: none; } }
+  .landing::before {
+    content: url("../img/decoration/leaves1.png");
+    position: absolute;
+    left: 3rem;
+    bottom: -6rem;
+    z-index: 5; }
+    @media screen and (max-width: 768px) {
+      .landing::before {
+        display: none; } }
 
 .reasons {
   position: relative;
-  padding-top: 10rem;
   background-image: url("../img/decoration/reasones-bg-image.png");
   background-repeat: no-repeat;
   background-position: center left; }
+  @media screen and (max-width: 768px) {
+    .reasons {
+      padding: 7rem 0; } }
   .reasons__container {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -600,19 +634,15 @@ img {
       .reasons__item {
         margin-right: 0;
         margin-bottom: 2.3rem; } }
-  .reasons::before {
-    content: "";
+  .reasons::after {
+    content: url("../img/decoration/berries2.png");
     position: absolute;
-    display: block;
-    background-image: url("../img/decoration/berries2.png");
-    background-position: right bottom;
-    background-size: contain;
-    background-repeat: no-repeat;
-    pointer-events: none;
-    bottom: -3rem;
+    z-index: 5;
     left: 0;
-    width: 16rem;
-    height: 31.5rem; }
+    bottom: 0;
+    -webkit-transform: translateY(45%);
+    -ms-transform: translateY(45%);
+    transform: translateY(45%); }
 
 .team__list {
   display: -webkit-box;
@@ -646,12 +676,35 @@ img {
     .team__item--down {
       margin-top: 0; } }
 
+.team::after {
+  content: "";
+  background-image: url("../img/decoration/berries4.png");
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  max-height: 15rem;
+  max-width: 10rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+  z-index: 5; }
+  @media screen and (max-width: 768px) {
+    .team::after {
+      max-height: 9rem;
+      max-width: 8rem; } }
+
 .menu {
   position: relative;
   background-image: url("../img/decoration/menu-bg-image.png");
   background-position: center;
   background-size: cover;
-  color: #fff; }
+  color: #fff;
+  overflow: hidden; }
   .menu .menu__heading {
     position: absolute;
     top: 10%;
@@ -661,7 +714,7 @@ img {
   position: relative; }
   @media screen and (max-width: 768px) {
     .reviews {
-      padding: 0 16%; } }
+      padding: 7rem 16%; } }
   @media screen and (max-width: 480px) {
     .reviews {
       padding: 0; } }
@@ -691,36 +744,60 @@ img {
     .reviews__item:last-child {
       margin-right: 0; }
   .reviews::before {
-    content: "";
+    content: url("../img/decoration/berries5.png");
     position: absolute;
-    display: block;
-    background-image: url("../img/decoration/berries5.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    pointer-events: none;
     top: 1rem;
     right: 0;
-    width: 17.3rem;
-    height: 9.9rem; }
+    z-index: 5; }
   .reviews::after {
     content: "";
-    position: absolute;
-    display: block;
     background-image: url("../img/decoration/reviews-fg-image.png");
     background-position: center;
-    background-size: cover;
     background-repeat: no-repeat;
-    pointer-events: none;
-    bottom: -8rem;
+    background-size: 100%;
+    max-height: 46rem;
+    max-width: 16rem;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -25rem;
     left: 0;
-    width: 16rem;
-    height: 42.1rem; }
+    z-index: 5; }
+    @media screen and (max-width: 768px) {
+      .reviews::after {
+        max-height: 26rem;
+        max-width: 10rem;
+        bottom: -15rem; } }
+
+.our-work::after {
+  content: "";
+  background-image: url("../img/decoration/berries8.png");
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  max-height: 26rem;
+  max-width: 20rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+  z-index: 5; }
+  @media screen and (max-width: 768px) {
+    .our-work::after {
+      max-height: 15rem;
+      max-width: 10rem; } }
 
 .order {
   background-color: #cfdeda;
   background-image: url("../img/decoration/order-bg-image.png");
   color: #0f5a47; }
+  @media screen and (max-width: 768px) {
+    .order {
+      padding: 7rem 0; } }
   .order__container {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -730,14 +807,31 @@ img {
     justify-content: center; }
   .order__heading {
     margin-bottom: 6rem; }
+  .order::after {
+    content: url("../img/decoration/berries7.png");
+    position: absolute;
+    left: 1%;
+    bottom: 8%;
+    z-index: 5; }
+    @media screen and (max-width: 768px) {
+      .order::after {
+        display: none; } }
+  .order::before {
+    content: url("../img/decoration/leaves3.png");
+    position: absolute;
+    right: 0;
+    bottom: 25%;
+    z-index: 5; }
+    @media screen and (max-width: 768px) {
+      .order::before {
+        display: none; } }
 
-.locations__map {
-  width: 100%;
-  height: 100%; }
-
-.locations__footer {
-  padding-top: 2.9rem;
-  padding-bottom: 2.2rem; }
+.locations {
+  background-image: url("../img/content/map.png");
+  background-size: cover; }
+  .locations__footer {
+    padding-top: 2.9rem;
+    padding-bottom: 2.2rem; }
 
 .footer {
   position: absolute;
@@ -871,19 +965,18 @@ img {
     @media screen and (max-width: 480px) {
       .contacts__street {
         margin-bottom: 2rem; } }
-  .contacts__phone::before {
-    content: "";
-    display: inline-block;
+  .contacts__phone {
+    white-space: nowrap; }
+  .contacts__phone-icon {
     width: 12px;
     height: 11px;
     margin-right: 7px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url("../img/decoration/icon-phone.png"); }
+    fill: #fff; }
   .contacts__phone--green {
+    vertical-align: middle;
     color: #0f5a47; }
-    .contacts__phone--green::before {
-      background-image: url("../img/decoration/icon-phone-green.png"); }
+    .contacts__phone--green .contacts__phone-icon {
+      fill: #0f5a47; }
   @media screen and (max-width: 480px) {
     .contacts {
       text-align: center;
@@ -914,8 +1007,13 @@ img {
     -ms-flex: 0 1 auto;
     flex: 0 1 auto;
     margin-right: 1rem; }
-  .feature__img {
-    width: 100%; }
+  .feature__icon {
+    width: 5rem;
+    height: 5rem;
+    fill: none;
+    stroke: #97e7f3;
+    stroke-width: 0.5;
+    stroke-miterlimit: 10; }
   .feature__description {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 0%;
@@ -947,9 +1045,12 @@ img {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; }
-    .reason__icon-img {
-      max-width: 100%;
-      max-height: 100%; }
+  .reason__svg {
+    width: 7rem;
+    fill: none;
+    stroke: #000000;
+    stroke-width: 0.75;
+    stroke-miterlimit: 10; }
   .reason__heading {
     margin-bottom: 2rem;
     font-family: "Alegreya Sans Bold";
@@ -1266,20 +1367,13 @@ img {
   align-items: center; }
   .social__item:not(:last-child) {
     margin-right: 2rem; }
+  .social__link {
+    display: inline-block; }
   .social__icon {
     display: inline-block;
     width: 2rem;
     height: 2rem;
     opacity: .3;
-    background-position: center;
-    background-repeat: no-repeat; }
+    fill: #000; }
     .social__icon:hover {
       opacity: 1; }
-  .social__icon--vk {
-    background-image: url("../img/content/vk.png"); }
-  .social__icon--fb {
-    background-image: url("../img/content/fb.png"); }
-  .social__icon--inst {
-    background-image: url("../img/content/inst.png"); }
-  .social__icon--tw {
-    background-image: url("../img/content/tw.png"); }
