@@ -15,19 +15,27 @@ const secReviewElement = document.querySelector('#sec-reviews');
 const secOrderElement = document.querySelector('#sec-order');
 const secLocationElement = document.querySelector('#sec-locations');
 
+const fullMenuLinks = document.querySelectorAll('.js-menu-link');
+
 
  
 
 
 //EVENT LISTENERS
+window.onscroll = onScrollEvents;
 menuOpen.addEventListener('click', openMenu);
 menuClose.addEventListener('click', closeMenu);
 menuLinksArray.forEach(function (el) {
     el.addEventListener('click', closeMenu);
 });
 
-window.onscroll = onScrollEvents;
+fullMenuLinks.forEach(function (el) {
+    el.addEventListener('click', function(e){
+        const parent = findParent(e.target, "LI");
+        parent.classList.toggle("is-active");
 
+    });
+});
 
 //FUCNTIONS
 function openMenu() {
@@ -76,4 +84,13 @@ function setActiveScrollLink (el, arr){
     prevActiveEl.classList.remove(cName);
     el.classList.add(cName);
 
+}
+
+function findParent(el, targetEl) {
+    const parentEl = el.parentElement;
+
+    if(parentEl.tagName == targetEl)
+        return parentEl;
+
+    return findParent(parentEl,targetEl);  
 }

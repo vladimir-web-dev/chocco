@@ -1372,7 +1372,10 @@ img {
     display: flex;
     z-index: 30;
     width: 0;
-    overflow: hidden; }
+    overflow: hidden;
+    -webkit-transition: width .5s ease-in;
+    -o-transition: width .5s ease-in;
+    transition: width .5s ease-in; }
   .accordion__button {
     display: block;
     height: 100%;

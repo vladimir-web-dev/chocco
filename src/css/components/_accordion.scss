@@ -27,6 +27,8 @@
        width: 0;
        overflow: hidden;
 
+       transition: width .5s ease-in;
+
    }
 
     &__button {
