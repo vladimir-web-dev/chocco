@@ -1,4 +1,8 @@
-.scroll {    
+.scroll { 
+    @include tablets {
+        display: none;
+    }
+
     &__list {
         display: flex;
         flex-direction: column;
@@ -13,6 +17,7 @@
         background-color: $c-white;
         margin-bottom: 1.6rem;
         
+        transition: background-color .3s;
 
         &--active::before {
             content: "";
@@ -33,6 +38,16 @@
         line-height: 0;
         width:100%;
         height: 100%;
+    }
+
+    &--green {
+        .scroll__item {
+            background-color: $c-secondary;
+        }
+
+        .scroll__item--active::before {
+            border-color: $c-secondary; 
+        }
     }
 
 

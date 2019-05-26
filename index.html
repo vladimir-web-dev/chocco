@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="wrapper"> 
-        <section class="landing section">
+        <section id="sec-landing" class="landing section">
             <div class="container landing__container">
                 <header class="header landing__header">
                     <div class="logo">
@@ -20,25 +20,25 @@
                             <nav class="navigation">
                                 <ul class="navigation__list">
                                     <li class="navigation__item">
-                                        <a href="#" class="navigation__link">О нас</a>
+                                        <a href="#sec-reasons" class="navigation__link">О нас</a>
                                     </li>
                                     <li class="navigation__item">
-                                        <a href="#" class="navigation__link">Батончики</a>
+                                        <a href="#sec-slider" class="navigation__link">Батончики</a>
                                     </li>
                                     <li class="navigation__item">
-                                        <a href="#" class="navigation__link">Команда</a>
+                                        <a href="#sec-team" class="navigation__link">Команда</a>
                                     </li>
                                     <li class="navigation__item">
-                                        <a href="#" class="navigation__link">Меню</a>
+                                        <a href="#sec-menu" class="navigation__link">Меню</a>
                                     </li>
                                     <li class="navigation__item">
-                                        <a href="#" class="navigation__link">Отзывы</a>
+                                        <a href="#sec-reviews" class="navigation__link">Отзывы</a>
                                     </li>
                                     <li class="navigation__item">
-                                        <a href="#" class="navigation__link">Как мы работаем</a>
+                                        <a href="#sec-our-work" class="navigation__link">Как мы работаем</a>
                                     </li>
                                     <li class="navigation__item">
-                                        <a href="#" class="navigation__link">Контакты</a>
+                                        <a href="#sec-locations" class="navigation__link">Контакты</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -51,7 +51,7 @@
                                 </a>
                             </div>
                         </div>
-                        <a class="hamburger-icon" href="#">
+                        <a class="hamburger-icon js-menu-open" href="#">
                             <span class="hamburger-icon__icon"></span>
                         </a>
                     </div>
@@ -96,7 +96,7 @@
                 </ul>
             </div>
         </section>
-        <section class="reasons section">
+        <section id="sec-reasons" class="reasons section">
             <div class="container reasons__container">
                 <h2 class="heading heading--secondary heading--sm">почему chocco?</h2>
                 <p class="reasons__description">
@@ -134,11 +134,59 @@
                 </ul>
             </div>
         </section>
-        <section class="slider section">
+        <section id="sec-slider" class="slider section">
             <div class="container">
+                <div class="carousel">
+                    <a href="#" class="carousel__link">
+                        <svg class="carousel__svg" preserveAspectRatio="none">
+                            <use xlink:href="src/img/svg/sprite.svg#arrow-left"></use>
+                        </svg>
+                    </a>
+                    <ul class="carousel__list">
+                        <li class="carousel__item">
+                            <div class="carousel__left">
+                                <div class="carousel__img">
+                                    <img src="src/img/decoration/bars2.png" alt="Chocco bars">
+                                </div>
+                            </div>
+                            <div class="carousel__right">
+                                <h4 class="carousel__heading">Батончик “Морские водоросли”</h4>
+                                <div class="product-description">
+                                    <div class="product-description__ingredients">
+                                        <h5 class="product-description__heading">Состав:</h5>
+                                        <p class="product-description__text">Гранола из морских водорослей с овсом, миндалем и
+                                             тыквенными семечками. В состав также входят: сухое молоко, заменитель сахара и какао 
+                                             бобы.
+                                        </p>
+                                    </div>
+                                    <div class="product-description__section">
+                                        <div class="product-description__cal">
+                                            <div class="product-description__numbers">Калорийность</div>
+                                            <div class="product-description__numbers product-description__numbers--bold">120 ккал</div>
+                                        </div>
+                                        <div class="product-description__weight">
+                                            <div class="product-description__numbers">Вес</div>
+                                            <div class="product-description__numbers product-description__numbers--bold">98 грамм</div>
+                                        </div>
+                                    </div>
+                                    <div class="product-description__section">
+                                        <span class="product-description__price">140 ₽</span>
+                                        <button type="button" class="main-btn">заказать</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <a href="#" class="carousel__link">
+                        <svg class="carousel__svg" preserveAspectRatio="none">
+                            <use xlink:href="src/img/svg/sprite.svg#arrow-right" preserveAspectRatio="none"></use>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </section>
-        <section class="team section">
+        <section id="sec-team" class="team section">
             <div class="container team__container">
                 <h2 class="heading heading--secondary">команда</h2>
                 <ul class="team__list">
@@ -152,7 +200,7 @@
                             <p class="member__comment">Отвечает за вкусовые качества и калорийность.</p>
                         </div>
                     </li>
-                    <li class="member team__item team__item--down">
+                    <li class="member team__item">
                         <div class="member__img-container">
                             <img src="src/img/content/team2.png" alt="Member Photo" class="member__img">
                         </div>
@@ -172,7 +220,7 @@
                             <p class="member__comment">С радостью поможет подобрать батончики и оформить заказ. </p>
                         </div>
                     </li>
-                    <li class="member team__item team__item--down">
+                    <li class="member team__item">
                         <div class="member__img-container">
                             <img src="src/img/content/team4.png" alt="Member Photo" class="member__img">
                         </div>
@@ -185,38 +233,55 @@
                 </ul>
             </div>
         </section>
-        <section class="menu section">
+        <section id="sec-menu" class="menu section">
             <h2 class="heading heading--secondary menu__heading">Меню</h2>
             <ul class="accordion menu__accordion">
                 <li class="accordion__item is-active">
-                    <a class="accordion__button accordion__button--bg1">
+                    <a class="accordion__button accordion__button--bg1 js-menu-link">
                         <h3 class="accordion__heading">Батончики с молоком</h3>
                     </a>
-                    <div class="accordion__content">
-                        <p class="accordion__text">Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее. 
-                            Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы. 
-                        </p>
-                    </div>
+                    <div class="accordion__hidden">
+                        <a class="accordion__button accordion__button--bg1 js-menu-link">
+                            <h3 class="accordion__heading">Батончики с молоком</h3>
+                        </a>
+                        <div class="accordion__content">
+                            <p class="accordion__text">Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее. 
+                                Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы. 
+                            </p>
+                        </div>
+                    </div>                  
                 </li>
-                 <li class="accordion__item">
-                    <a class="accordion__button accordion__button--bg2">
+                 <li class="accordion__item"> 
+                     <a class="accordion__button accordion__button--bg2 js-menu-link">
                         <h3 class="accordion__heading">С мёдом и фруктами</h3>
-                    </a>
-                    <div class="accordion__content">
-                        <div class="accordion__text"></div>
+                    </a>                 
+                    <div class="accordion__hidden">
+                        <a class="accordion__button accordion__button--bg2 js-menu-link">
+                            <h3 class="accordion__heading">С мёдом и фруктами</h3>
+                        </a>
+                        <div class="accordion__content">
+                            <p class="accordion__text">
+
+                            </p>
+                        </div>
                     </div>
                 </li>
                  <li class="accordion__item">
-                    <a class="accordion__button accordion__button--bg3">
+                    <a class="accordion__button accordion__button--bg3 js-menu-link">
                         <h3 class="accordion__heading">Дикие ягоды</h3>
                     </a>
-                    <div class="accordion__content">
-                        <div class="accordion__text"></div>
+                    <div class="accordion__hidden">
+                        <a class="accordion__button accordion__button--bg3 js-menu-link">
+                            <h3 class="accordion__heading">Дикие ягоды</h3>
+                        </a>
+                        <div class="accordion__content">
+                            <p class="accordion__text"></p>
+                        </div>
                     </div>
                 </li>
             </ul>
         </section>
-        <section class="reviews section">
+        <section id="sec-reviews" class="reviews section">
             <div class="container reviews__container">
                 <h2 class="heading heading--secondary">отзывы</h2>
                 <div class="review reviews__review">
@@ -250,10 +315,10 @@
                 </ul>
             </div>
         </section>
-        <section class="our-work section">
+        <section id="sec-our-work" class="our-work section">
             <div class="container"></div>
         </section>
-        <section class="order section">
+        <section id="sec-order" class="order section">
             <div class="container order__container">
                 <h2 class="heading heading--secondary order__heading">Закажите доставку</h2>
                     <form action="" class="form__tag">
@@ -317,13 +382,13 @@
                             </div>
                             <div class="form__buttons">
                                 <div class="form__row form__row--no-m">
-                                    <div class="form__cell">
+                                    <div class="form__cell form__cell--no-f">
                                         <label  class="form__block form__check">
                                             <input type="radio"  name="radio" class="form__check-hidden">
                                             <span class="form__check-icon form__radio"></span>
                                             <span class="form__check-title">Потребуется сдача</span>
                                         </label></div>
-                                    <div class="form__cell">
+                                    <div class="form__cell form__cell--no-f">
                                         <label  class="form__block form__check">
                                             <input type="radio" name="radio" class="form__check-hidden">
                                             <span class="form__check-icon form__radio"></span>
@@ -342,7 +407,7 @@
                                 </div>
                                 <div class="form__row">
                                     <button type="button" class="main-btn form__button">заказать</button>
-                                    <button class="form-button form__button">Очистить</button>
+                                    <button type="reset" class="form-button form__button">Очистить</button>
                                 </div>
                             </div>
                         </div>
@@ -350,7 +415,7 @@
                 </form>
             </div>
         </section>
-        <section class="locations section">   
+        <section id="sec-locations" class="locations section">   
             <!-- <img class="map locations__map" alt="Map" src='src/img/content/map.png'>               -->
             <!-- <div class="container locations__container"> 
                              
@@ -410,35 +475,68 @@
     <aside class="aside">
         <nav class="scroll">
             <ul class="scroll__list">
-                <li class="scroll__item scroll__item--active">
-                    <a href="#" class="scroll__link"></a>
+                <li class="scroll__item js-scroll scroll__item--active" data-rel="sec-landing">
+                    <a href="#sec-landing" class="scroll__link"></a>
                 </li>
-                <li class="scroll__item">
-                    <a href="#" class="scroll__link"></a>
+                <li class="scroll__item js-scroll" data-rel="sec-reasons">
+                    <a href="#sec-reasons" class="scroll__link"></a>
                 </li>
-                <li class="scroll__item">
-                    <a href="#" class="scroll__link"></a>
+                <li class="scroll__item js-scroll" data-rel="sec-slider">
+                    <a href="#sec-slider" class="scroll__link"></a>
                 </li>
-                <li class="scroll__item">
-                    <a href="#" class="scroll__link"></a>
+                <li class="scroll__item js-scroll" data-rel="sec-team">
+                    <a href="#sec-team" class="scroll__link" data-rel="sec-team"></a>
                 </li>
-                <li class="scroll__item">
-                    <a href="#" class="scroll__link"></a>
+                <li class="scroll__item js-scroll" data-rel="sec-menu">
+                    <a href="#sec-menu" class="scroll__link"></a>
                 </li>
-                <li class="scroll__item">
-                    <a href="#" class="scroll__link"></a>
+                <li class="scroll__item js-scroll" data-rel="sec-reviews">
+                    <a href="#sec-reviews" class="scroll__link"></a>
                 </li>
-                <li class="scroll__item">
-                    <a href="#" class="scroll__link"></a>
+                <li class="scroll__item js-scroll" data-rel="sec-our-work">
+                    <a href="#sec-our-work" class="scroll__link"></a>
                 </li>
-                <li class="scroll__item">
-                    <a href="#" class="scroll__link"></a>
+                <li class="scroll__item js-scroll" data-rel="sec-order">
+                    <a href="#sec-order" class="scroll__link"></a>
                 </li>
-                <li class="scroll__item">
-                    <a href="#" class="scroll__link"></a>
+                <li class="scroll__item js-scroll" data-rel="sec-locations">
+                    <a href="#sec-locations" class="scroll__link"></a>
                 </li>
             </ul>
         </nav>
-    </aside>    
+    </aside>
+    <div class="mobile-menu">
+        <a class="mobile-menu__close js-menu-close">
+            <svg class="mobile-menu__close-icon">
+                <use xlink:href="src/img/svg/sprite.svg#menu-close"></use>
+            </svg>
+        </a>
+        <nav class="navigation mobile-menu__navigtion">
+            <ul class="navigation__list">
+                <li class="navigation__item" >
+                    <a href="#sec-reasons" class="navigation__link js-nav-link">О нас</a>
+                </li>
+                <li class="navigation__item" >
+                    <a href="#sec-slider" class="navigation__link js-nav-link">Батончики</a>
+                </li>
+                <li class="navigation__item" >
+                    <a href="#sec-team" class="navigation__link js-nav-link">Команда</a>
+                </li>
+                <li class="navigation__item" >
+                    <a href="#sec-menu" class="navigation__link js-nav-link">Меню</a>
+                </li>
+                <li class="navigation__item" >
+                    <a href="#sec-reviews" class="navigation__link js-nav-link">Отзывы</a>
+                </li>
+                <li class="navigation__item" >
+                    <a href="#sec-our-work" class="navigation__link js-nav-link">Как мы работаем</a>
+                </li>
+                <li class="navigation__item" >
+                    <a href="#sec-locations" class="navigation__link js-nav-link">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+    </div> 
+    <script src="src/js/script.js"></script>   
 </body>
 </html>

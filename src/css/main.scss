@@ -15,6 +15,7 @@
 @import 'layout/header';
 @import 'layout/landing';
 @import 'layout/reasons';
+@import 'layout/slider';
 @import 'layout/team';
 @import 'layout/menu';
 @import 'layout/reviews';
@@ -22,6 +23,7 @@
 @import 'layout/order';
 @import 'layout/locations';
 @import 'layout/footer';
+@import 'layout/mobile-menu';
 
 /*components*/
 @import 'components/scroll';
@@ -32,6 +34,10 @@
 @import 'components/main-btn';
 @import 'components/feature';
 @import 'components/reason';
+@import 'components/carousel';
+@import 'components/product-description';
+
+
 @import 'components/heading';
 @import 'components/review';
 @import 'components/avatar';

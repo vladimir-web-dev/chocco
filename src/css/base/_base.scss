@@ -8,6 +8,7 @@ body {
 }
 
 html {
+    scroll-behavior: smooth;
     font-size: 10px;
 
     @include tablets{
@@ -20,6 +21,7 @@ html {
 }
 
 body {
+    position: relative;
     margin: 0;
     padding: 0;
 
@@ -87,7 +89,6 @@ img {
     overflow: hidden;
     position: relative;
     min-height: 100%;
-    width: 100%;
 }
 
 .container {
