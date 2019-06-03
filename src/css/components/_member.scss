@@ -29,10 +29,14 @@
         }
     }
 
-    &__box {
-        text-align: center;
+    &__box {   
         max-height: 0;
         overflow: hidden;
+    }
+
+    &__content {
+        text-align: center;
+        opacity: 0;
     }
 
     &__occupation {
@@ -47,11 +51,14 @@
         font-size: 1.8rem;
     }
     
-    &.is-active .member__box {
+    &.show-content .member__box {
         max-height: 100%;
     }
+    &.show-content .member__content {
+        opacity: 1;
+    }
 
-    &.is-active .member__button::after {
+    &.show-content .member__button::after {
         content: "\25B2";
     }
 }

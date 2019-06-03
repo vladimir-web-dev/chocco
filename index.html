@@ -135,50 +135,84 @@
             </div>
         </section>
         <section id="sec-slider" class="slider section">
-            <div class="container">
+            <div class="container slider__container">
                 <div class="carousel">
-                    <a href="#" class="carousel__link">
+                    <a href="#" class="carousel__link carousel__link--l" data-move data-move-left>
                         <svg class="carousel__svg" preserveAspectRatio="none">
                             <use xlink:href="src/img/svg/sprite.svg#arrow-left"></use>
                         </svg>
                     </a>
-                    <ul class="carousel__list">
-                        <li class="carousel__item">
-                            <div class="carousel__left">
-                                <div class="carousel__img">
-                                    <img src="src/img/decoration/bars2.png" alt="Chocco bars">
-                                </div>
-                            </div>
-                            <div class="carousel__right">
-                                <h4 class="carousel__heading">Батончик “Морские водоросли”</h4>
-                                <div class="product-description">
-                                    <div class="product-description__ingredients">
-                                        <h5 class="product-description__heading">Состав:</h5>
-                                        <p class="product-description__text">Гранола из морских водорослей с овсом, миндалем и
-                                             тыквенными семечками. В состав также входят: сухое молоко, заменитель сахара и какао 
-                                             бобы.
-                                        </p>
-                                    </div>
-                                    <div class="product-description__section">
-                                        <div class="product-description__cal">
-                                            <div class="product-description__numbers">Калорийность</div>
-                                            <div class="product-description__numbers product-description__numbers--bold">120 ккал</div>
-                                        </div>
-                                        <div class="product-description__weight">
-                                            <div class="product-description__numbers">Вес</div>
-                                            <div class="product-description__numbers product-description__numbers--bold">98 грамм</div>
-                                        </div>
-                                    </div>
-                                    <div class="product-description__section">
-                                        <span class="product-description__price">140 ₽</span>
-                                        <button type="button" class="main-btn">заказать</button>
+                    <div class="carousel__list-container">
+                        <ul class="carousel__list">
+                            <li class="carousel__item">
+                                <div class="carousel__left">
+                                    <div class="carousel__img">
+                                        <img src="src/img/decoration/bars2.png" alt="Chocco bars">
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                    </ul>
-                    
-                    <a href="#" class="carousel__link">
+                                <div class="carousel__right">
+                                    <h4 class="carousel__heading">Батончик “Морские водоросли”</h4>
+                                    <div class="product-description">
+                                        <div class="product-description__ingredients">
+                                            <h5 class="product-description__heading">Состав:</h5>
+                                            <p class="product-description__text">Гранола из морских водорослей с овсом, миндалем и
+                                                    тыквенными семечками. В состав также входят: сухое молоко, заменитель сахара и какао 
+                                                    бобы.
+                                            </p>
+                                        </div>
+                                        <div class="product-description__section">
+                                            <div class="product-description__cal">
+                                                <div class="product-description__numbers">Калорийность</div>
+                                                <div class="product-description__numbers product-description__numbers--bold">120 ккал</div>
+                                            </div>
+                                            <div class="product-description__weight">
+                                                <div class="product-description__numbers">Вес</div>
+                                                <div class="product-description__numbers product-description__numbers--bold">98 грамм</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-description__section">
+                                            <span class="product-description__price">140 ₽</span>
+                                            <button type="button" class="main-btn">заказать</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="carousel__item">
+                                <div class="carousel__left">
+                                    <div class="carousel__img">
+                                        <img src="src/img/decoration/bars3.png" alt="Chocco bars">
+                                    </div>
+                                </div>
+                                <div class="carousel__right">
+                                    <h4 class="carousel__heading">Батончик “Гранола виноград”</h4>
+                                    <div class="product-description">
+                                        <div class="product-description__ingredients">
+                                            <h5 class="product-description__heading">Состав:</h5>
+                                            <p class="product-description__text">
+                                                Гранола из винограда, грецкого ореха и кунжутных семечек.
+                                                В состав также входят: сухое молоко, заменитель сахара и какао бобы.
+                                            </p>
+                                        </div>
+                                        <div class="product-description__section">
+                                            <div class="product-description__cal">
+                                                <div class="product-description__numbers">Калорийность</div>
+                                                <div class="product-description__numbers product-description__numbers--bold">110 ккал</div>
+                                            </div>
+                                            <div class="product-description__weight">
+                                                <div class="product-description__numbers">Вес</div>
+                                                <div class="product-description__numbers product-description__numbers--bold">95 грамм</div>
+                                            </div>
+                                        </div>
+                                        <div class="product-description__section">
+                                            <span class="product-description__price">140 ₽</span>
+                                            <button type="button" class="main-btn">заказать</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>                                      
+                    <a href="#" class="carousel__link carousel__link--r" data-move data-move-right>
                         <svg class="carousel__svg" preserveAspectRatio="none">
                             <use xlink:href="src/img/svg/sprite.svg#arrow-right" preserveAspectRatio="none"></use>
                         </svg>
@@ -194,40 +228,48 @@
                         <div class="member__img-container">
                             <img src="src/img/content/team1.png" alt="Member Photo" class="member__img">
                         </div>
-                        <a href="#" class="member__button">Борис Федорович</a>
+                        <a href="#" class="member__button" toggle-content>Борис Федорович</a>
                         <div class="member__box">
-                            <h5 class="member__occupation">Главный технолог</h5>
-                            <p class="member__comment">Отвечает за вкусовые качества и калорийность.</p>
+                            <div class="member__content">
+                                <h5 class="member__occupation">Главный технолог</h5>
+                                <p class="member__comment">Отвечает за вкусовые качества и калорийность.</p>
+                            </div>
                         </div>
                     </li>
                     <li class="member team__item">
                         <div class="member__img-container">
                             <img src="src/img/content/team2.png" alt="Member Photo" class="member__img">
                         </div>
-                        <a href="#" class="member__button">Алла Иванова</a>
+                        <a href="#" class="member__button" toggle-content>Алла Иванова</a>
                         <div class="member__box">
-                            <h5 class="member__occupation">Специалист по упаковке</h5>
-                            <p class="member__comment">Автор запоминающегося стиля наших батончиков.</p>
+                            <div class="member__content">
+                                <h5 class="member__occupation">Специалист по упаковке</h5>
+                                <p class="member__comment">Автор запоминающегося стиля наших батончиков.</p>
+                            </div>
                         </div>
                     </li>
-                    <li class="member team__item is-active">
+                    <li class="member team__item show-content">
                         <div class="member__img-container">
                             <img src="src/img/content/team3.png" alt="Member Photo" class="member__img">
                         </div>
-                        <a href="#" class="member__button">Кирилл Матросов</a>
+                        <a href="#" class="member__button" toggle-content>Кирилл Матросов</a>
                         <div class="member__box">
-                            <h5 class="member__occupation">Оператор</h5>
-                            <p class="member__comment">С радостью поможет подобрать батончики и оформить заказ. </p>
+                            <div class="member__content">
+                                <h5 class="member__occupation">Оператор</h5>
+                                <p class="member__comment">С радостью поможет подобрать батончики и оформить заказ. </p>
+                            </div>
                         </div>
                     </li>
                     <li class="member team__item">
                         <div class="member__img-container">
                             <img src="src/img/content/team4.png" alt="Member Photo" class="member__img">
                         </div>
-                        <a href="#" class="member__button">Мила Рыжкова</a>
+                        <a href="#" class="member__button" toggle-content>Мила Рыжкова</a>
                         <div class="member__box">
-                            <h5 class="member__occupation">PR, маркетинг</h5>
-                            <p class="member__comment">По всем вопросам сотрудничества и рекламы писать только Миле. </p>
+                            <div class="member__content">
+                                <h5 class="member__occupation">PR, маркетинг</h5>
+                                <p class="member__comment">По всем вопросам сотрудничества и рекламы писать только Миле. </p>
+                            </div>
                         </div>
                     </li>
                 </ul>
@@ -236,46 +278,63 @@
         <section id="sec-menu" class="menu section">
             <h2 class="heading heading--secondary menu__heading">Меню</h2>
             <ul class="accordion menu__accordion">
-                <li class="accordion__item is-active">
-                    <a class="accordion__button accordion__button--bg1 js-menu-link">
+                <li class="accordion__item show-content">
+                    <a class="accordion__button accordion__button--bg1 " toggle-content>
                         <h3 class="accordion__heading">Батончики с молоком</h3>
                     </a>
                     <div class="accordion__hidden">
-                        <a class="accordion__button accordion__button--bg1 js-menu-link">
+                        <a class="accordion__button accordion__button--bg1 " toggle-content>
                             <h3 class="accordion__heading">Батончики с молоком</h3>
                         </a>
                         <div class="accordion__content">
+                            <a class="accordion__close" toggle-content>
+                                <svg class="mobile-menu__close-icon">
+                                    <use xlink:href="src/img/svg/sprite.svg#menu-close"></use>
+                                </svg>
+                            </a>  
                             <p class="accordion__text">Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее. 
                                 Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы. 
                             </p>
                         </div>
                     </div>                  
                 </li>
-                 <li class="accordion__item"> 
-                     <a class="accordion__button accordion__button--bg2 js-menu-link">
+                <li class="accordion__item"> 
+                     <a class="accordion__button accordion__button--bg2 " toggle-content>
                         <h3 class="accordion__heading">С мёдом и фруктами</h3>
                     </a>                 
                     <div class="accordion__hidden">
-                        <a class="accordion__button accordion__button--bg2 js-menu-link">
+                        <a class="accordion__button accordion__button--bg2 " toggle-content>
                             <h3 class="accordion__heading">С мёдом и фруктами</h3>
                         </a>
                         <div class="accordion__content">
+                            <a class="accordion__close " toggle-content>
+                                <svg class="mobile-menu__close-icon">
+                                    <use xlink:href="src/img/svg/sprite.svg#menu-close"></use>
+                                </svg>
+                            </a>  
                             <p class="accordion__text">
-
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum quibusdam delectus, deleniti odit vero iste nemo iusto exercitationem molestiae totam ducimus vel porro aspernatur aliquid nesciunt tenetur autem commodi. Consectetur.
                             </p>
                         </div>
                     </div>
                 </li>
-                 <li class="accordion__item">
-                    <a class="accordion__button accordion__button--bg3 js-menu-link">
+                <li class="accordion__item">
+                    <a class="accordion__button accordion__button--bg3 " toggle-content>
                         <h3 class="accordion__heading">Дикие ягоды</h3>
                     </a>
                     <div class="accordion__hidden">
-                        <a class="accordion__button accordion__button--bg3 js-menu-link">
+                        <a class="accordion__button accordion__button--bg3 " toggle-content>
                             <h3 class="accordion__heading">Дикие ягоды</h3>
                         </a>
                         <div class="accordion__content">
-                            <p class="accordion__text"></p>
+                            <a class="accordion__close " toggle-content>
+                                <svg class="mobile-menu__close-icon">
+                                    <use xlink:href="src/img/svg/sprite.svg#menu-close"></use>
+                                </svg>
+                            </a>                        
+                            <p class="accordion__text">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus tenetur velit reiciendis consequatur eaque adipisci dolore exercitationem libero dolor quod deleniti, iusto nihil aliquam, dolorem ipsa, officiis assumenda totam error.
+                            </p>
                         </div>
                     </div>
                 </li>
@@ -286,18 +345,16 @@
                 <h2 class="heading heading--secondary">отзывы</h2>
                 <div class="review reviews__review">
                     <div class="review__avatar">
-                        <img src="src/img/content/photo1.png" alt="Avatar" class="review__avatar-img">
+                        <img src="" alt="Avatar" class="review__avatar-img">
                     </div>
                     <article class="review__text">
-                        <h3 class="review__heading">Лучший перекус</h3>
-                        <p class="review__description">Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. 
-                            В течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить. 
-                            А батончик – он всегда под рукой. Это приятно и удобно. </p>
-                        <h5 class="review__signature">Алёна Хмельницкая</h5>
+                        <h3 class="review__heading"></h3>
+                        <p class="review__description"></p>
+                        <h5 class="review__signature"></h5>
                     </article>
                 </div>
                 <ul class="reviews__list">
-                    <li class="avatar reviews__item reviews__item--active">
+                    <!-- <li class="avatar reviews__item reviews__item--active">
                         <a href="#" class="avatar__link">
                             <img src="src/img/content/avatar1.png" alt="Avatar" class="avatar__img">
                         </a>
@@ -311,7 +368,7 @@
                         <a href="#" class="avatar__link">
                             <img src="src/img/content/avatar3.png" alt="Avatar" class="avatar__img">
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </section>
@@ -321,20 +378,20 @@
         <section id="sec-order" class="order section">
             <div class="container order__container">
                 <h2 class="heading heading--secondary order__heading">Закажите доставку</h2>
-                    <form action="" class="form__tag">
+                    <form name="formOrder" action="" class="form__tag">
                     <div class="form order__form">
                         <div class="form__col">
                             <div class="form__row">
                                 <div class="form__cell">
                                     <label class="form__block">
                                         <div class="form__title">Имя</div>
-                                        <input type="text" class="form__input form-field">
+                                        <input name="name" type="text" class="form__input form-field">
                                     </label>
                                 </div>
                                 <div class="form__cell">
                                     <label class="form__block">
                                         <div class="form__title">Телефон</div>
-                                        <input type="text" class="form__input form-field">
+                                        <input name="phone" type="text" class="form__input form-field">
                                     </label>
                                 </div>                                
                             </div>
@@ -377,7 +434,7 @@
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="form__title">Комментарий</div>
-                                    <textarea type="text" class="form__textarea form-field"></textarea>
+                                    <textarea name="comment" type="text" class="form__textarea form-field"></textarea>
                                 </label>
                             </div>
                             <div class="form__buttons">
@@ -406,7 +463,7 @@
                                     </div>                                                                                     
                                 </div>
                                 <div class="form__row">
-                                    <button type="button" class="main-btn form__button">заказать</button>
+                                    <button type="submit" class="main-btn form__button">заказать</button>
                                     <button type="reset" class="form-button form__button">Очистить</button>
                                 </div>
                             </div>
@@ -506,7 +563,7 @@
         </nav>
     </aside>
     <div class="mobile-menu">
-        <a class="mobile-menu__close js-menu-close">
+        <a class="mobile-menu__close" close-menu>
             <svg class="mobile-menu__close-icon">
                 <use xlink:href="src/img/svg/sprite.svg#menu-close"></use>
             </svg>
@@ -514,29 +571,39 @@
         <nav class="navigation mobile-menu__navigtion">
             <ul class="navigation__list">
                 <li class="navigation__item" >
-                    <a href="#sec-reasons" class="navigation__link js-nav-link">О нас</a>
+                    <a href="#sec-reasons" class="navigation__link" close-menu>О нас</a>
                 </li>
                 <li class="navigation__item" >
-                    <a href="#sec-slider" class="navigation__link js-nav-link">Батончики</a>
+                    <a href="#sec-slider" class="navigation__link" close-menu>Батончики</a>
                 </li>
                 <li class="navigation__item" >
-                    <a href="#sec-team" class="navigation__link js-nav-link">Команда</a>
+                    <a href="#sec-team" class="navigation__link" close-menu>Команда</a>
                 </li>
                 <li class="navigation__item" >
-                    <a href="#sec-menu" class="navigation__link js-nav-link">Меню</a>
+                    <a href="#sec-menu" class="navigation__link" close-menu>Меню</a>
                 </li>
                 <li class="navigation__item" >
-                    <a href="#sec-reviews" class="navigation__link js-nav-link">Отзывы</a>
+                    <a href="#sec-reviews" class="navigation__link" close-menu>Отзывы</a>
                 </li>
                 <li class="navigation__item" >
-                    <a href="#sec-our-work" class="navigation__link js-nav-link">Как мы работаем</a>
+                    <a href="#sec-our-work" class="navigation__link" close-menu>Как мы работаем</a>
                 </li>
                 <li class="navigation__item" >
-                    <a href="#sec-locations" class="navigation__link js-nav-link">Контакты</a>
+                    <a href="#sec-locations" class="navigation__link" close-menu>Контакты</a>
                 </li>
             </ul>
         </nav>
     </div> 
+    <div class="modal js-modal">
+        <div class="modal__container">
+            <div class="modal__content">
+                <h4 class="modal__heading"></h4>
+            </div>
+            <div class="modal__buttons">
+                <button type="button" class="main-btn modal__button js-close-modal">закрыть</button>
+            </div>
+        </div>
+    </div>
     <script src="src/js/script.js"></script>   
 </body>
 </html>
