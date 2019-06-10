@@ -387,7 +387,7 @@ button {
   cursor: pointer; }
 
 .section {
-  height: 100vh;
+  height: 100%;
   position: relative; }
   @media screen and (max-width: 768px) {
     .section {
@@ -403,8 +403,16 @@ img {
 
 .wrapper {
   overflow: hidden;
-  position: relative;
-  min-height: 100%; }
+  height: 100%;
+  position: relative; }
+
+.inner-wrapper {
+  height: 100%;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  -o-transition: transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s; }
 
 .container {
   max-width: 94rem;
@@ -648,6 +656,9 @@ img {
 .slider {
   padding: 11rem 0;
   background-color: #f8faf9; }
+  @media screen and (max-width: 768px) {
+    .slider__container {
+      width: 90%; } }
   .slider::after {
     content: "";
     background-image: url("../img/decoration/berries9.png");
@@ -852,12 +863,13 @@ img {
       .order::before {
         display: none; } }
 
-.locations {
-  background-image: url("../img/content/map.png");
-  background-size: cover; }
-  .locations__footer {
-    padding-top: 2.9rem;
-    padding-bottom: 2.2rem; }
+.locations__map {
+  height: 100%;
+  width: 100%; }
+
+.locations__footer {
+  padding-top: 2.9rem;
+  padding-bottom: 2.2rem; }
 
 .footer {
   position: absolute;
@@ -1150,7 +1162,8 @@ img {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  position: relative; }
+  position: relative;
+  width: 100%; }
   .carousel__link {
     width: 2rem;
     position: absolute; }
@@ -1238,6 +1251,97 @@ img {
   @media screen and (max-width: 768px) {
     .carousel__container {
       margin: 0 2rem; } }
+
+.player {
+  width: 100%;
+  max-width: 66rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .player__video-container {
+    position: relative;
+    line-height: 0; }
+  .player__video {
+    display: block;
+    font-size: 0;
+    width: 100%; }
+  .player__controls {
+    padding: 5px 20px;
+    background-color: #3e3e3e;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .player__control:not(:last-child) {
+    margin-right: 13px; }
+  .player__play-btn, .player__mute-btn {
+    display: inline-block;
+    width: 1.4rem;
+    height: 2rem; }
+  .player__play-icon, .player__mute-icon {
+    fill: #626262;
+    width: 1.4rem;
+    height: 2rem; }
+  .player__play-icon--big {
+    fill: rgba(255, 255, 255, 0.8);
+    width: 8rem;
+    height: 12rem; }
+  .player__play-screen {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .player__range {
+    -webkit-appearance: none;
+    /* Override default CSS styles */
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 4px;
+    background: #626262;
+    border-top: 1px solid #5b5b5b;
+    border-bottom: 1px solid #5b5b5b;
+    outline: none;
+    -webkit-transition: .2s;
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s; }
+  .player__range:hover {
+    opacity: 1; }
+  .player__range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #626262;
+    border-radius: 50%;
+    cursor: pointer; }
+  .player__range::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background: #626262;
+    border-radius: 50%;
+    cursor: pointer; }
+  .player__range--vol {
+    width: 5rem; }
 
 @media screen and (max-width: 768px) {
   .product-description {
@@ -1424,7 +1528,12 @@ img {
     display: flex;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
-    justify-content: flex-end; }
+    justify-content: flex-end;
+    position: relative;
+    width: auto;
+    -webkit-transition: width .5s ease-in;
+    -o-transition: width .5s ease-in;
+    transition: width .5s ease-in; }
   .accordion__hidden {
     position: absolute;
     top: 0;
@@ -1482,6 +1591,8 @@ img {
     width: 100%;
     max-width: 35rem;
     line-height: 1.8; }
+  .accordion__item.show-content {
+    width: 100%; }
   .accordion__item.show-content .accordion__hidden {
     width: 100%; }
   .accordion__close {

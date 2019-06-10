@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="src/css/main.css">
 </head>
 <body>
-    <div class="wrapper"> 
+    <div class="wrapper">
+        <div class="inner-wrapper">
+
         <section id="sec-landing" class="landing section">
             <div class="container landing__container">
                 <header class="header landing__header">
@@ -20,25 +22,25 @@
                             <nav class="navigation">
                                 <ul class="navigation__list">
                                     <li class="navigation__item">
-                                        <a href="#sec-reasons" class="navigation__link">О нас</a>
+                                        <a href="#sec-reasons" class="navigation__link" data-index="1">О нас</a>
                                     </li>
                                     <li class="navigation__item">
-                                        <a href="#sec-slider" class="navigation__link">Батончики</a>
+                                        <a href="#sec-slider" class="navigation__link" data-index="2">Батончики</a>
                                     </li>
                                     <li class="navigation__item">
-                                        <a href="#sec-team" class="navigation__link">Команда</a>
+                                        <a href="#sec-team" class="navigation__link" data-index="3">Команда</a>
                                     </li>
                                     <li class="navigation__item">
-                                        <a href="#sec-menu" class="navigation__link">Меню</a>
+                                        <a href="#sec-menu" class="navigation__link" data-index="4">Меню</a>
                                     </li>
                                     <li class="navigation__item">
-                                        <a href="#sec-reviews" class="navigation__link">Отзывы</a>
+                                        <a href="#sec-reviews" class="navigation__link" data-index="5">Отзывы</a>
                                     </li>
                                     <li class="navigation__item">
-                                        <a href="#sec-our-work" class="navigation__link">Как мы работаем</a>
+                                        <a href="#sec-our-work" class="navigation__link" data-index="6">Как мы работаем</a>
                                     </li>
                                     <li class="navigation__item">
-                                        <a href="#sec-locations" class="navigation__link">Контакты</a>
+                                        <a href="#sec-locations" class="navigation__link" data-index="8">Контакты</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -373,7 +375,37 @@
             </div>
         </section>
         <section id="sec-our-work" class="our-work section">
-            <div class="container"></div>
+            <div class="container our-work__container">
+                <h2 class="heading heading--secondary">как мы работаем</h2>
+
+                <div class="player">
+                    <div class="player__video-container">
+                        <video id="player" class="player__video">
+                            <source src="src/video/video.mp4" type="video/mp4">
+                        </video>
+                        <a id="btnPlayBig" class="player__play-screen">
+                            <svg class="player__play-icon player__play-icon--big" viewBox="0 0 300 300" preserveAspectRatio="none" >
+                                <use xlink:href="src/img/svg/sprite.svg#play"  ></use>
+                            </svg>
+                        </a>
+                    </div>                 
+                    <div class="player__controls">
+                        <button id="btnPlay" type="button" class="player__play-btn player__control">
+                            <svg class="player__play-icon"  viewBox="0 0 300 300" preserveAspectRatio="none">
+                                <use xlink:href="src/img/svg/sprite.svg#play"></use>
+                            </svg>
+                        </button>
+                        <input id="duration" type="range" min="0" value="0" class="player__range player__control">
+
+                        <button id="btnMute" type="button" class="player__mute-btn player__control">
+                            <svg class="player__mute-icon" >
+                                <use xlink:href="src/img/svg/sprite.svg#mute" preserveAspectRatio="none"></use>
+                            </svg>
+                        </button>
+                        <input id="volume" type="range" min="0"  max="100" value="30" class="player__range player__range--vol player__control">
+                    </div>                    
+                </div>
+            </div>
         </section>
         <section id="sec-order" class="order section">
             <div class="container order__container">
@@ -385,13 +417,13 @@
                                 <div class="form__cell">
                                     <label class="form__block">
                                         <div class="form__title">Имя</div>
-                                        <input name="name" type="text" class="form__input form-field">
+                                        <input name="name" type="text" class="form__input form-field" required>
                                     </label>
                                 </div>
                                 <div class="form__cell">
                                     <label class="form__block">
                                         <div class="form__title">Телефон</div>
-                                        <input name="phone" type="text" class="form__input form-field">
+                                        <input name="phone" type="text" class="form__input form-field" required>
                                     </label>
                                 </div>                                
                             </div>
@@ -434,7 +466,7 @@
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="form__title">Комментарий</div>
-                                    <textarea name="comment" type="text" class="form__textarea form-field"></textarea>
+                                    <textarea name="comment" type="text" class="form__textarea form-field" required></textarea>
                                 </label>
                             </div>
                             <div class="form__buttons">
@@ -472,7 +504,8 @@
                 </form>
             </div>
         </section>
-        <section id="sec-locations" class="locations section">   
+        <section id="sec-locations" class="locations section"> 
+                <div id="map" class="locations__map"></div>  
             <!-- <img class="map locations__map" alt="Map" src='src/img/content/map.png'>               -->
             <!-- <div class="container locations__container"> 
                              
@@ -532,31 +565,31 @@
     <aside class="aside">
         <nav class="scroll">
             <ul class="scroll__list">
-                <li class="scroll__item js-scroll scroll__item--active" data-rel="sec-landing">
+                <li class="scroll__item js-scroll scroll__item--active" data-rel="sec-landing" data-index="0">
                     <a href="#sec-landing" class="scroll__link"></a>
                 </li>
-                <li class="scroll__item js-scroll" data-rel="sec-reasons">
+                <li class="scroll__item js-scroll" data-rel="sec-reasons" data-index="1">
                     <a href="#sec-reasons" class="scroll__link"></a>
                 </li>
-                <li class="scroll__item js-scroll" data-rel="sec-slider">
+                <li class="scroll__item js-scroll" data-rel="sec-slider" data-index="2">
                     <a href="#sec-slider" class="scroll__link"></a>
                 </li>
-                <li class="scroll__item js-scroll" data-rel="sec-team">
+                <li class="scroll__item js-scroll" data-rel="sec-team" data-index="3">
                     <a href="#sec-team" class="scroll__link" data-rel="sec-team"></a>
                 </li>
-                <li class="scroll__item js-scroll" data-rel="sec-menu">
+                <li class="scroll__item js-scroll" data-rel="sec-menu" data-index="4">
                     <a href="#sec-menu" class="scroll__link"></a>
                 </li>
-                <li class="scroll__item js-scroll" data-rel="sec-reviews">
+                <li class="scroll__item js-scroll" data-rel="sec-reviews" data-index="5">
                     <a href="#sec-reviews" class="scroll__link"></a>
                 </li>
-                <li class="scroll__item js-scroll" data-rel="sec-our-work">
+                <li class="scroll__item js-scroll" data-rel="sec-our-work" data-index="6">
                     <a href="#sec-our-work" class="scroll__link"></a>
                 </li>
-                <li class="scroll__item js-scroll" data-rel="sec-order">
+                <li class="scroll__item js-scroll" data-rel="sec-order" data-index="7">
                     <a href="#sec-order" class="scroll__link"></a>
                 </li>
-                <li class="scroll__item js-scroll" data-rel="sec-locations">
+                <li class="scroll__item js-scroll" data-rel="sec-locations" data-index="8">
                     <a href="#sec-locations" class="scroll__link"></a>
                 </li>
             </ul>
@@ -571,25 +604,25 @@
         <nav class="navigation mobile-menu__navigtion">
             <ul class="navigation__list">
                 <li class="navigation__item" >
-                    <a href="#sec-reasons" class="navigation__link" close-menu>О нас</a>
+                    <a href="#sec-reasons" class="navigation__link" close-menu data-index="1">О нас</a>
                 </li>
                 <li class="navigation__item" >
-                    <a href="#sec-slider" class="navigation__link" close-menu>Батончики</a>
+                    <a href="#sec-slider" class="navigation__link" close-menu data-index="2">Батончики</a>
                 </li>
                 <li class="navigation__item" >
-                    <a href="#sec-team" class="navigation__link" close-menu>Команда</a>
+                    <a href="#sec-team" class="navigation__link" close-menu data-index="3">Команда</a>
                 </li>
                 <li class="navigation__item" >
-                    <a href="#sec-menu" class="navigation__link" close-menu>Меню</a>
+                    <a href="#sec-menu" class="navigation__link" close-menu data-index="4">Меню</a>
                 </li>
                 <li class="navigation__item" >
-                    <a href="#sec-reviews" class="navigation__link" close-menu>Отзывы</a>
+                    <a href="#sec-reviews" class="navigation__link" close-menu data-index="5">Отзывы</a>
                 </li>
                 <li class="navigation__item" >
-                    <a href="#sec-our-work" class="navigation__link" close-menu>Как мы работаем</a>
+                    <a href="#sec-our-work" class="navigation__link" close-menu data-index="6">Как мы работаем</a>
                 </li>
                 <li class="navigation__item" >
-                    <a href="#sec-locations" class="navigation__link" close-menu>Контакты</a>
+                    <a href="#sec-locations" class="navigation__link" close-menu data-index="8">Контакты</a>
                 </li>
             </ul>
         </nav>
@@ -604,6 +637,17 @@
             </div>
         </div>
     </div>
-    <script src="src/js/script.js"></script>   
+</div> 
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=9b02f2c7-d9f7-489a-8e48-92094597d70e&lang=ru_RU" type="text/javascript">
+    </script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+    <script src="src/js/map.js"></script>   
+    <script src="src/js/script.js"></script>
+    <script src="src/js/scroll.js"></script> 
+    <script src="src/js/player.js"></script>   
+  
 </body>
 </html>

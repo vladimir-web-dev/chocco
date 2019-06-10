@@ -2,6 +2,11 @@
     padding: 11rem 0;
     background-color: #f8faf9;
 
+    &__container {
+        @include tablets {
+            width: 90%;
+        }
+    }
 
     &::after {
         content:"" ;

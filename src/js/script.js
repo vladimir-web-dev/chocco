@@ -12,14 +12,6 @@ const secOrderElement = document.querySelector('#sec-order');
 const secLocationElement = document.querySelector('#sec-locations');
 const secSliderElement = document.querySelector('#sec-slider');
 
-
-
-const menuOpen = document.querySelector('.js-menu-open');
-const menuElement = document.querySelector('.mobile-menu');
-const scrollLinksArray = document.querySelectorAll('.js-scroll');
-const scrollElement = document.querySelector('.scroll');
-const sectionsArray = document.querySelectorAll('.section');
-
 //reviews
 const reviewImgEl = document.querySelector('.review__avatar-img');
 const reviewHeadingEl = document.querySelector('.review__heading');
@@ -34,14 +26,13 @@ const btnCloseModalEl = document.querySelector('.js-close-modal');
 
 (function(){
     getReviews();
+
+    ymaps.ready(initMap);
 })();
 
 //EVENT LISTENERS
-window.addEventListener('scroll', onScrollEvents);
 secTeamElement.addEventListener('click', toggleContent);
 secMenuElement.addEventListener('click', toggleContent);
-menuOpen.addEventListener('click', openMenu);
-menuElement.addEventListener('click', closeMenu);
 reviewsFormEl.addEventListener('submit', sendOrder)
 btnCloseModalEl.addEventListener('click', toggleModal);
 secSliderElement.addEventListener('click', moveSlider);
@@ -69,46 +60,30 @@ function closeMenu(event) {
     }, 500);
 }
 
-function onScrollEvents() {
-    const activeSection = getActiveSection();
-    const bgColor = getComputedStyle(activeSection)["background-color"];
-    const activeLink = [...scrollLinksArray].find(function(el) {
-        return el.dataset.rel == activeSection.id;
-    });
+// function onScrollEvents() {
+//     const activeSection = getActiveSection();
+//     const bgColor = getComputedStyle(activeSection)["background-color"];
+//     const activeLink = [...scrollLinksArray].find(function(el) {
+//         return el.dataset.rel == activeSection.id;
+//     });
 
-    if(bgColor == "rgba(0, 0, 0, 0)" || bgColor == "rgb(248, 250, 249)" )
-        scrollElement.classList.add('scroll--green');
-    else
-        scrollElement.classList.remove('scroll--green');   
+//     if(bgColor == "rgba(0, 0, 0, 0)" || bgColor == "rgb(248, 250, 249)" )
+//         scrollElement.classList.add('scroll--green');
+//     else
+//         scrollElement.classList.remove('scroll--green');   
 
-    setActiveScrollLink(activeLink);
-}
+//     setActiveScrollLink(activeLink);
+// }
 
-function changeScrollColor(fn) {
-    scrollElement.classList.fn('scroll--greens')
-}
-
-function getActiveSection () {
-    return [...sectionsArray].find(function(el){
-        const rect = el.getBoundingClientRect();
-        return rect.y < 100 && (rect.y * -1) < rect.height - 100;
-    });
-}
-
-function setActiveScrollLink (el, arr){
-    const cName = 'scroll__item--active';
-    const prevActiveEl = document.querySelector('.scroll__item--active');
-    
-    prevActiveEl.classList.remove(cName);
-    el.classList.add(cName);
-
-}
+// function changeScrollColor(fn) {
+//     scrollElement.classList.fn('scroll--greens')
+// }
 
 
 function toggleContent(event) {
     let target = event.target;
     event.preventDefault();
-
+    document.query
     if (!target.hasAttribute('toggle-content')) {
         target = findParent(target, 'A');
     }
@@ -118,6 +93,11 @@ function toggleContent(event) {
 
     const parentLiElement = findParent(target, 'LI');
     parentLiElement.classList.toggle('show-content');
+
+    const siblings = [...parentLiElement.parentElement.children].filter(c=>c.nodeType == 1 && c!=parentLiElement)
+    siblings.forEach(s => {
+        s.classList.remove('show-content');
+    })
 
 }
 
@@ -140,8 +120,10 @@ function getReviews() {
     xhr.send();
 
     xhr.addEventListener('load', function(event){
-        if(xhr.status < 400)
-            initClendar(xhr.response);
+        if(xhr.status < 400){
+            const data = xhr.response;
+            initClendar(data);
+        }
     });;
 }
 
@@ -209,14 +191,15 @@ function sendOrder(e) {
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
     xhr.send(formData);
+    xhr.responseType = 'json';
 
     xhr.addEventListener('load', function() {
         if(xhr.status < 400) {
-            toggleModal("Сообщение отправлено");
+            toggleModal(xhr.response.message);
             form.reset(); 
         }
         else
-            toggleModal("Произошла ошибка! Попробуйте снова");
+            toggleModal(xhr.response.message);
     });
 }
 
@@ -253,4 +236,3 @@ function moveSlider(e) {
 
     // }
 }
-
