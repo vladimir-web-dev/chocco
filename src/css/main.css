@@ -1311,7 +1311,6 @@ img {
     justify-content: center; }
   .player__range {
     -webkit-appearance: none;
-    /* Override default CSS styles */
     -moz-appearance: none;
     appearance: none;
     width: 100%;
@@ -1319,13 +1318,7 @@ img {
     background: #626262;
     border-top: 1px solid #5b5b5b;
     border-bottom: 1px solid #5b5b5b;
-    outline: none;
-    -webkit-transition: .2s;
-    -webkit-transition: opacity .2s;
-    -o-transition: opacity .2s;
-    transition: opacity .2s; }
-  .player__range:hover {
-    opacity: 1; }
+    outline: none; }
   .player__range::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;

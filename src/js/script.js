@@ -38,27 +38,27 @@ btnCloseModalEl.addEventListener('click', toggleModal);
 secSliderElement.addEventListener('click', moveSlider);
 
 //FUCNTIONS
-function openMenu() {
-    menuElement.style.display = 'flex';
-    menuElement.style.opacity = 1;
-}
+// function openMenu() {
+//     menuElement.style.display = 'flex';
+//     menuElement.style.opacity = 1;
+// }
 
-function closeMenu(event) {
-    const target = event.target;
+// function closeMenu(event) {
+//     const target = event.target;
 
-    if (!target.hasAttribute('close-menu')) {
-        target = findParent(target, 'A');
-    }
+//     if (!target.hasAttribute('close-menu')) {
+//         target = findParent(target, 'A');
+//     }
 
-    if(target === null)
-        return;
+//     if(target === null)
+//         return;
 
-    menuElement.style.opacity = 0;
+//     menuElement.style.opacity = 0;
 
-    setTimeout(function(){
-        menuElement.style.display = 'none';
-    }, 500);
-}
+//     setTimeout(function(){
+//         menuElement.style.display = 'none';
+//     }, 500);
+// }
 
 // function onScrollEvents() {
 //     const activeSection = getActiveSection();

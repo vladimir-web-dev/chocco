@@ -19,7 +19,11 @@ btnPlayBig.addEventListener('click', e => {
 
 btnMute.addEventListener('click', e => player.muted = !player.muted);
 
-volume.addEventListener('change', e => player.volume = e.target.value / 100);
+volume.addEventListener('change', e =>  {
+    player.volume = e.target.value / 100;
+});
+
+
 
 duration.addEventListener('change', e => {
     player.currentTime = e.target.value

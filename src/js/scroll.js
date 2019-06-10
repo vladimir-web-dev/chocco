@@ -5,8 +5,11 @@ const paginationItems = document.querySelectorAll('.scroll__item');
 
 const menuOpen = document.querySelector('.js-menu-open');
 const mobileMenu = document.querySelector('.mobile-menu');
+const mobileMenuClose = document.querySelector('.mobile-menu__close');
 const headerMenu = document.querySelector('.header__menu'); 
 const scrollElement = document.querySelector('.scroll');
+const md = new MobileDetect(window.navigator.userAgent);
+const isMobile = md.mobile();
 
 let i = 0;
 let inScroll = false;
@@ -50,6 +53,7 @@ function activatePagination(index) {
 
 
 menuOpen.addEventListener('click', openMenu);
+mobileMenuClose.addEventListener('click', closeMenu);
 
 mobileMenu.addEventListener('click', function(e) {
     if(e.target.tagName == "A") {
@@ -73,10 +77,12 @@ scrollElement.addEventListener('click', function(e){
 function openMenu() {
     mobileMenu.style.display = 'flex';
     mobileMenu.style.opacity = 1;
+    wrapper.style.height = "100%";
 }
 
 function closeMenu(event) {
     let target = event.target;
+    wrapper.style.height = "";
 
     if (!target.hasAttribute('close-menu')) {
         target = findParent(target, 'A');
@@ -117,6 +123,7 @@ function menuLinkClick(e){
     }, 1000);        
 }
 
+if (isMobile) {
 $(document).swipe( {   
     swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
         
@@ -139,3 +146,4 @@ $(document).swipe( {
    
     
   });
+}
